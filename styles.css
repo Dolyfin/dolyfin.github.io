@@ -81,6 +81,25 @@ ul {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--eerie-black);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--eerie-black);
+}
+
+.logo-text {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -758,6 +777,15 @@ section {
     }
 
     .logo {
+        gap: 0.5rem;
+    }
+
+    .logo-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .logo-text {
         font-size: 1.2rem;
     }
 
@@ -887,6 +915,15 @@ section {
 
 /* Small Mobile */
 @media (max-width: 480px) {
+    .logo-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
     .nav-menu {
         gap: 0.75rem;
     }
