@@ -817,33 +817,56 @@ section {
     /* Stack property rows vertically */
     .property-row {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-bottom: 3rem;
+        gap: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    /* Ensure consistent order regardless of desktop layout */
+    .property-row .main-image {
+        order: 1;
+    }
+
+    .property-row .secondary-images {
+        order: 3;
+    }
+
+    .property-row .property-address {
+        order: 2;
     }
 
     .main-image {
-        height: 300px;
-        order: 1;
+        height: 400px;
     }
 
     .secondary-images {
         height: auto;
         gap: 1rem;
-        order: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     .offset-top,
     .offset-bottom {
         align-self: stretch;
-        max-height: 200px;
+        max-height: none;
+        height: 250px;
     }
 
     .property-address {
-        padding: 1rem 0;
+        padding: 1.5rem 0 1rem;
+        text-align: left;
+        background-color: var(--seasalt);
+        padding: 1.5rem;
+        margin: 0;
     }
 
     .property-address h3 {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .property-address p {
+        font-size: 1rem;
     }
 
     /* Services Grid */
@@ -936,15 +959,38 @@ section {
         font-size: 1.5rem;
     }
 
-    .main-image,
+    .property-row {
+        margin-bottom: 3rem;
+    }
+
+    .main-image {
+        height: 300px;
+    }
+
     .offset-top,
     .offset-bottom {
-        height: 250px;
-        max-height: 250px;
+        height: 200px;
+    }
+
+    .secondary-images {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .property-address {
+        padding: 1.25rem;
+    }
+
+    .property-address h3 {
+        font-size: 1.2rem;
+    }
+
+    .property-address p {
+        font-size: 0.95rem;
     }
 
     .overlay-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .service-icon svg {
