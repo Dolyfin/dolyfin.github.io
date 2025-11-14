@@ -215,15 +215,22 @@ section {
 
 .property-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-bottom: 4rem;
-    align-items: center;
+    align-items: stretch;
+}
+
+.property-row.row-left {
+    grid-template-columns: 1.2fr 0.8fr;
+}
+
+.property-row.row-right {
+    grid-template-columns: 0.8fr 1.2fr;
 }
 
 .main-image {
     position: relative;
-    height: 600px;
+    aspect-ratio: 3 / 2;
 }
 
 .main-image .image-wrapper {
@@ -240,7 +247,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    height: 600px;
+    height: 100%;
 }
 
 .secondary-images .image-wrapper {
@@ -749,14 +756,6 @@ section {
         gap: 1.5rem;
     }
 
-    .main-image {
-        height: 450px;
-    }
-
-    .secondary-images {
-        height: 450px;
-    }
-
     .services-grid {
         gap: 2rem;
     }
@@ -832,10 +831,6 @@ section {
 
     .property-row .property-address {
         order: 2;
-    }
-
-    .main-image {
-        height: 400px;
     }
 
     .secondary-images {
@@ -961,10 +956,6 @@ section {
 
     .property-row {
         margin-bottom: 3rem;
-    }
-
-    .main-image {
-        height: 300px;
     }
 
     .offset-top,
